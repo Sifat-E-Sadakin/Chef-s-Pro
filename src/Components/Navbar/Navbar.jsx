@@ -20,19 +20,21 @@ const Navbar = () => {
                     <Link to='/signUp'>SignUp</Link>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="btn btn-ghost normal-case text-xl">Chef's Pro</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-2">
                     <Link to='/'>Home</Link>
                     <Link to='/login'>Login</Link>
                     <Link to='/signUp'>SignUp</Link>
-                    {user && <p>{user.email}</p>}
+                    <Link to='/blog'>Blog</Link>
+                    
                     {user && <button onClick={logout} >Sing Out</button> }
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                {user? <img title={user.displayName} src={user.photoURL} className='rounded-full w-12'></img>:  <Link className='btn' to='/login'>Login</Link>}
+              
             </div>
         </div>
     );
