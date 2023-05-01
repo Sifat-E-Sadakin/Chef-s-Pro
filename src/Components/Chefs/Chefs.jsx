@@ -13,7 +13,7 @@ const Chefs = () => {
 
             <div className='grid lg:grid-cols-2 gap-10'>
                 {
-                    chefs.map(chef=> <ChefsCard chef={chef}></ChefsCard>)
+                    chefs.map(chef=> <ChefsCard key={chef.id} chef={chef}></ChefsCard>)
                 }
             </div>
             
