@@ -7,6 +7,8 @@ export let userContext= createContext(null);
 
 const UserProvider = ({children}) => {
 
+    
+
     let [user, setUser]= useState(null);
 
     let [loading, setLoading]= useState(true);
@@ -52,6 +54,14 @@ const UserProvider = ({children}) => {
         return signInWithPopup(auth, googleProvider);
     }
 
+    let [chefs, setChefs] = useState([])
+
+    useEffect(()=>{
+        fetch('https://assignment-10-server-seven-ashy.vercel.app/')
+        .then(res=> res.json())
+        .then(data=> setChefs(data))
+    },[])
+
 
     let newUser={
         user,
@@ -59,7 +69,8 @@ const UserProvider = ({children}) => {
         createNewUser,
         login,
         logout,
-        googlePopUp
+        googlePopUp,
+        chefs
     }
 
 

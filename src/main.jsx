@@ -12,6 +12,7 @@ import SignUp from './Components/SignUp/SignUp.jsx';
 import HomePage from './Components/Home/HomePage.jsx';
 import UserProvider from './Components/UserProvider/UserProvider.jsx';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
+import Recipes from './Components/Recipes/Recipes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/recipes/:id",
+        element: <Recipes></Recipes>,
+        loader: ({params})=>fetch(`https://assignment-10-server-seven-ashy.vercel.app/${params.id}`)
       },
     ],
   },
