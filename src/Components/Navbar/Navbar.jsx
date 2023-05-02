@@ -5,6 +5,7 @@ import { userContext } from '../UserProvider/UserProvider';
 const Navbar = () => {
 
     let { user, logout } = useContext(userContext);
+    console.log(user && user.photoURL);
 
 
     return (

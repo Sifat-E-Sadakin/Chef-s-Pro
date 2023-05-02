@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
-
 import '@smastrom/react-rating/style.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -10,7 +12,16 @@ import '@smastrom/react-rating/style.css'
 const TopRecipes = ({ recipe }) => {
 
 
-    let { name, ingredients, method, ratings, cooking_method } = recipe;
+    let { id,name, ingredients, method, ratings, cooking_method } = recipe;
+
+    let addToFav =(event)=>{
+        toast(`${name} added to favorite list` )
+        // document.getElementById('btn').disabled= true
+        event.target.disabled= true
+        
+    }
+
+    // console.log(recipe);
 
     return (
         <div>
@@ -37,10 +48,11 @@ const TopRecipes = ({ recipe }) => {
                         </div>
                         
 
-                        <button className="btn btn-primary">Add As favorite </button>
+                        <button id='btn'  className="btn btn-primary"  onClick={addToFav} >Add As favorite </button>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
