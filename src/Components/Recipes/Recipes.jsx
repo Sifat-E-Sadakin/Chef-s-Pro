@@ -6,7 +6,7 @@ import TopRecipes from '../TopRecipes/TopRecipes';
 const Recipes = () => {
 
     let chefsRecipes = useLoaderData();
-    console.log(chefsRecipes);
+    // console.log(chefsRecipes);
 
     let { photo, name, experience, likes , number_of_recipes, recipes} = chefsRecipes
 
