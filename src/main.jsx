@@ -15,6 +15,7 @@ import UserProvider from './Components/UserProvider/UserProvider.jsx';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import Recipes from './Components/Recipes/Recipes.jsx';
 import NotFount from './Components/404/NotFount.jsx';
+import Blogs from './Components/Blogs/Blogs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: "/recipes/:id",
         element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
         loader: ({params})=>fetch(`https://assignment-10-server-seven-ashy.vercel.app/${params.id}`)
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
       {
         path: '/*',

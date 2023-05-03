@@ -1,0 +1,16 @@
+.qna h1{
+    font-size:larger;
+    font-weight: 500;
+    margin: 15px 0;
+}
+.qna p{
+    font-size: large;
+    font-weight: 400;
+    margin: 10px;
+    width: 700px
+}
+@media (max-width: 576px){
+    .qna p{
+        width: fit-content;
+    }
+}

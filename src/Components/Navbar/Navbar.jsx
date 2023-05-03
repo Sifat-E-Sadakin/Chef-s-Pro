@@ -32,7 +32,7 @@ const Navbar = () => {
 
                         <ActiveLink to='/login'>Login</ActiveLink>
                         <ActiveLink to='/signUp'>SignUp</ActiveLink>
-                        <ActiveLink to='/blog'>Blog</ActiveLink>
+                        <ActiveLink to='/blogs'>Blogs</ActiveLink>
 
                         {user && <button onClick={logout} >Sing Out</button>}
                     </ul>
