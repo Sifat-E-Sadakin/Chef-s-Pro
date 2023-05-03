@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <PrivateRoute><HomePage></HomePage></PrivateRoute>,
+        element: <HomePage></HomePage>,
       },
       {
         path: "/login",
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/recipes/:id",
-        element: <Recipes></Recipes>,
+        element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
         loader: ({params})=>fetch(`https://assignment-10-server-seven-ashy.vercel.app/${params.id}`)
       },
       {

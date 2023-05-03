@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, updateProfile } from "firebase/auth";
 import app from '../Firebase/Firebase.config';
+import { useNavigate } from 'react-router-dom';
 
 
 export let userContext= createContext(null);
@@ -12,6 +13,8 @@ const UserProvider = ({children}) => {
     let [user, setUser]= useState(null);
 
     let [loading, setLoading]= useState(true);
+
+ 
 
     let googleProvider = new GoogleAuthProvider();
 
@@ -37,6 +40,7 @@ const UserProvider = ({children}) => {
                 setUser(userInfo);
                 setLoading(false)
                 console.log("onAuth change", userInfo);
+                
             
 
         })

@@ -28,6 +28,8 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex gap-2">
                         <ActiveLink to='/'>Home</ActiveLink>
+                        <ActiveLink to='/recipes'>Chef Details</ActiveLink>
+
                         <ActiveLink to='/login'>Login</ActiveLink>
                         <ActiveLink to='/signUp'>SignUp</ActiveLink>
                         <ActiveLink to='/blog'>Blog</ActiveLink>

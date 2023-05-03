@@ -2,12 +2,22 @@ import React, { useContext, useState } from 'react';
 import { userContext } from '../UserProvider/UserProvider';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { Navigate, useLocation, useNavigate, useNavigation } from 'react-router-dom';
 
 const Login = () => {
 
     let [err, setErr]= useState(null)
 
-    let {login, googlePopUp, gitPopUp} = useContext(userContext);
+    let {login, googlePopUp, gitPopUp, user} = useContext(userContext);
+
+    let location = useLocation();
+    // console.log(location);
+    
+    let navigate = useNavigate();
+
+    let go = location.state?.from?.pathname || '/';
+
+    
 
 
     let submit=(event)=>{
@@ -24,6 +34,7 @@ const Login = () => {
         .then(res =>{
             let user = res.user;
             console.log(user);
+            navigate(go)
             
         }
 
@@ -31,6 +42,23 @@ const Login = () => {
         .catch(err =>setErr(err.message))
 
     }
+
+    let handelGooglePopUp = ()=>{
+        googlePopUp()
+        .then(res=>{
+            navigate(go)
+        })
+       
+    }
+    let handelGitPopUp = ()=>{
+        gitPopUp()
+        .then(res=>{
+
+            navigate(go)
+        })
+       
+    }
+
     return (
         <div className="hero  min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
@@ -65,11 +93,11 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="form-control mt-6">
-                    <button onClick={googlePopUp} className="btn btn-primary"><FaGoogle className='text-xl mr-2'></FaGoogle> Login With google</button>
+                    <button onClick={handelGooglePopUp} className="btn btn-primary"><FaGoogle className='text-xl mr-2'></FaGoogle> Login With google</button>
                                 
                     </div>
                     <div className="form-control mt-6">
-                    <button onClick={gitPopUp} className="btn btn-primary"><FaGithub className='text-xl mr-2'></FaGithub> Login With github</button>
+                    <button onClick={handelGitPopUp} className="btn btn-primary"><FaGithub className='text-xl mr-2'></FaGithub> Login With github</button>
                                 
                     </div>
                 </div>
