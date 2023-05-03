@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { userContext } from '../UserProvider/UserProvider';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Login = () => {
 
-    let [err, setErr, user]= useState(null)
+    let [err, setErr]= useState(null)
 
-    let {login} = useContext(userContext);
+    let {login, googlePopUp, gitPopUp} = useContext(userContext);
 
 
     let submit=(event)=>{
@@ -51,13 +53,25 @@ const Login = () => {
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
+                                <label className="label">
+                                    <p>First time in Chef's Pro <span className='link font-semibold'><ActiveLink to='/signUp'>Sign Up here</ActiveLink></span> </p>
+                                </label>
                                 {err &&  <p>{err}</p>}
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
+                                
                             </div>
                         </div>
                     </form>
+                    <div className="form-control mt-6">
+                    <button onClick={googlePopUp} className="btn btn-primary"><FaGoogle className='text-xl mr-2'></FaGoogle> Login With google</button>
+                                
+                    </div>
+                    <div className="form-control mt-6">
+                    <button onClick={gitPopUp} className="btn btn-primary"><FaGithub className='text-xl mr-2'></FaGithub> Login With github</button>
+                                
+                    </div>
                 </div>
             </div>
 
