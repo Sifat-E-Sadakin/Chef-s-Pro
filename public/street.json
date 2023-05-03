@@ -1,0 +1,20 @@
+[
+    {
+        "id":"ST1",
+        "name":"Chanachur",
+        "photo": "https://ychef.files.bbci.co.uk/1600x900/p0cdyx42.webp",
+        "info":"Chanachur is a popular snack mix from Bangladesh made with a variety of fried lentils, nuts, spices, and savory ingredients, often enjoyed as a crunchy and flavorful snack."
+    },
+    {
+        "id":"ST2",
+        "name":"Fuchka ",
+        "photo": "https://img.freepik.com/premium-photo/pakistani-spicy-gol-gappay-indian-pani-puri-bangali-fuchka-full-chaat-masala-with-sour-water-dish-isolated-marble-background-top-view-indian-street-food_689047-523.jpg?w=1060",
+        "info":"Fuchka is a popular street food from Bangladesh consisting of crispy shells filled with spicy mashed potatoes, chickpeas, tamarind sauce, and other flavorful ingredients, often enjoyed as a tangy and delicious snack."
+    },
+    {
+        "id":"ST3",
+        "name":"Jhal Muri",
+        "photo": "https://i.ndtvimg.com/i/2016-01/plav-jhal-muri_625x350_41453875535.jpg",
+        "info":"Jhal Muri is a popular street food snack from Bangladesh made with puffed rice, peanuts, spices, and vegetables, mixed with tangy tamarind sauce and mustard oil, often enjoyed as a crunchy and flavorful snack.."
+    }
+]
