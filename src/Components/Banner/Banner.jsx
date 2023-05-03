@@ -8,7 +8,7 @@ const Banner = () => {
                 <h1 className='text-3xl lg:text-5xl  font-semibold '>All Chef's Are Pro Here</h1>
                 <p className='text-2xl lg:text-3xl'>You can rely on them</p>
             </div>
-            <LazyLoad height={762}>
+            <LazyLoad >
             <img src={banner} className='' alt="" />
 
             </LazyLoad>

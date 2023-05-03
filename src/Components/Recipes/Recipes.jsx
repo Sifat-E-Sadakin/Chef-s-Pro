@@ -17,7 +17,7 @@ const Recipes = () => {
     return (
         <div className='container mx-auto'>
 
-            <div className='grid grid-cols-2 items-center py-10'>
+            <div className='grid lg:grid-cols-2 gap-5 items-center py-10'>
                 <div>
                     <LazyLoad>
                     <img src={photo} alt="" id='chef' className='rounded-xl' />
