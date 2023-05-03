@@ -43,20 +43,20 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name='email' type="email" placeholder="email" className="input input-bordered" />
+                                <input required name='email' type="email" placeholder="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                                <input required type="password" name='password' placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                                 <label className="label">
                                     <p>First time in Chef's Pro <span className='link font-semibold'><ActiveLink to='/signUp'>Sign Up here</ActiveLink></span> </p>
                                 </label>
-                                {err &&  <p>{err}</p>}
+                                {err &&  <p className='text-warning'>{err}</p>}
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>

@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, updateProfile } from "firebase/auth";
 import app from '../Firebase/Firebase.config';
 
 
@@ -61,6 +61,15 @@ const UserProvider = ({children}) => {
         return signInWithPopup(auth, gitProvider);
     }
 
+    let update =(name, photo)=>{
+        return updateProfile(auth.currentUser,{
+            displayName: name,
+            photoURL: photo
+
+        })
+
+    }
+
     let [chefs, setChefs] = useState([])
 
     useEffect(()=>{
@@ -78,7 +87,8 @@ const UserProvider = ({children}) => {
         logout,
         googlePopUp,
         gitPopUp,
-        chefs
+        chefs,
+        update
     }
 
 
