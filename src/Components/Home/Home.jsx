@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import { Outlet, useNavigation } from 'react-router-dom';
 import './Home.css'
 import { ClipLoader, CircleLoader } from 'react-spinners';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
             </div>
 
             <Outlet></Outlet>
+            <Footer></Footer>
 
         </div>
     );
