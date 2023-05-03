@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import './Recipes.css'
 import TopRecipes from '../TopRecipes/TopRecipes';
+import LazyLoad from 'react-lazy-load';
 
 const Recipes = () => {
 
@@ -18,7 +19,9 @@ const Recipes = () => {
 
             <div className='grid grid-cols-2 items-center py-10'>
                 <div>
+                    <LazyLoad>
                     <img src={photo} alt="" id='chef' className='rounded-xl' />
+                    </LazyLoad>
 
                 </div>
                 <div>
