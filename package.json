@@ -24,6 +24,7 @@
     "react-spinners": "^0.13.8",
     "react-to-pdf": "^0.0.14",
     "react-toastify": "^9.1.2",
+    "react-tooltip": "^5.11.1",
     "sort-by": "^0.0.2"
   },
   "devDependencies": {
