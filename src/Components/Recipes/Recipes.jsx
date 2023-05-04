@@ -9,7 +9,7 @@ const Recipes = () => {
     let chefsRecipes = useLoaderData();
     // console.log(chefsRecipes);
 
-    let { photo, name, experience, likes , number_of_recipes, recipes} = chefsRecipes
+    let { photo, name, experience, likes , number_of_recipes, recipes, specialty} = chefsRecipes
 
     // console.log(recipes);
 
@@ -30,7 +30,7 @@ const Recipes = () => {
 
                 </div>
                 <div>
-                    <h1 className='text-3xl'> <span className='font-semibold'>{name}</span> have <span className='font-semibold'> {likes} </span> Likes and</h1>
+                    <h1 className='text-3xl'> <span className='font-semibold'>{name}</span> is expert at <span className='font-semibold'>{specialty}</span> and have <span className='font-semibold'> {likes} </span> Likes and</h1>
                     <h2 className='text-2xl'>{experience}</h2>
                     <h2 className='text-xl'>Additionally, has <span className='font-semibold'>{number_of_recipes}+</span> recipes.  </h2>
 

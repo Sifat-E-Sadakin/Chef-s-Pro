@@ -6,7 +6,7 @@ const Traditional = () => {
     let [food, setFood] = useState([])
 
     useEffect(()=>{
-        fetch('./traditional.json')
+        fetch('https://assignment-10-server-sifat-e-sadakin.vercel.app/seaFood')
         .then(res=>res.json())
         .then(data => setFood(data))
     },[])

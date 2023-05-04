@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ShowFavRecipes = ({item}) => {
+const ShowFavRecipes = ({item, remove}) => {
+
+    
+
+  
+
 
     return (
          <div className="card w-96 bg-base-100 shadow-xl">
@@ -9,7 +14,7 @@ const ShowFavRecipes = ({item}) => {
                  <h2 className="card-title">{item.name}</h2>
                  <p>{item.method? item.method: item.cooking_method }</p>
                  <div className="card-actions justify-end">
-                     <button className="btn btn-primary">Buy Now</button>
+                     <button onClick={()=>remove(item.id)} className="btn btn-primary">Buy Now</button>
                  </div>
              </div>
         </div>

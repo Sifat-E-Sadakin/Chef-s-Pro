@@ -27,6 +27,7 @@ const FavRecipes = () => {
     }
     // console.log(arr);
     
+    
     let fromLocalStorage = getShoppingCart();
 
     let findFev;

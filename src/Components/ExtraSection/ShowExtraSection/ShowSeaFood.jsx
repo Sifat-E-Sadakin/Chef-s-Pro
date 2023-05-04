@@ -17,7 +17,8 @@ const ShowSeaFood = ({item}) => {
     }
 
     let addToLocalStorage =(id)=>{
-        console.log(id);
+        // console.log(id);
+        //not done for time limitation 
         addToDb(id)
     }
     return (

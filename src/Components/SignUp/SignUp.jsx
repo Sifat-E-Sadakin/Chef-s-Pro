@@ -101,7 +101,7 @@ const SignUp = () => {
                                     <p>Already have an account  <span className='link font-semibold'><ActiveLink to='/login'>Login here</ActiveLink></span> </p>
                                     {err && <p className='text-accent'>{err}</p>}
                                     <div className="form-control mt-6">
-                                        <button className="btn btn-primary">Login</button>
+                                        <button className="btn btn-primary">Sign Up</button>
                                     </div>
                                 </div>
                             </form>

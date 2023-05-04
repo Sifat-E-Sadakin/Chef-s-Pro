@@ -31,7 +31,7 @@ const Navbar = () => {
                     <a className="btn btn-ghost normal-case text-xl">Chef's Pro</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 flex gap-2">
+                    <ul className="menu menu-horizontal px-1 flex gap-5">
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='/recipes'>Chef Details</ActiveLink>
                         <ActiveLink to='/favRecipes'>Favorite Recipes</ActiveLink>

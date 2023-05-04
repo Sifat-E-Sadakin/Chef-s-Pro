@@ -17,7 +17,7 @@ const ShowTraditional = ({item}) => {
     }
 
     let addToLocalStorage =(id)=>{
-        console.log(id);
+        // console.log(id);
         addToDb(id)
     }
     return (

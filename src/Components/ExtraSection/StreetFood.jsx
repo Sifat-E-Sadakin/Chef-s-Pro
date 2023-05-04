@@ -6,7 +6,7 @@ const StreetFood = () => {
     let [food, setFood] = useState([])
 
     useEffect(() => {
-        fetch('./street.json')
+        fetch('https://assignment-10-server-sifat-e-sadakin.vercel.app/streetFood')
             .then(res => res.json())
             .then(data => setFood(data))
     }, [])
