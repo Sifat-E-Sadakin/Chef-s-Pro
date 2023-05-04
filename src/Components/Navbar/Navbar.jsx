@@ -20,9 +20,10 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='/recipes'>Chef Details</ActiveLink>
+                        <ActiveLink to='/favRecipes'>Favorite Recipes</ActiveLink>
 
-                        <ActiveLink to='/login'>Login</ActiveLink>
-                        <ActiveLink to='/signUp'>SignUp</ActiveLink>
+                        {user? <></>:<ActiveLink to='/login'>Login</ActiveLink>}
+                        {user?<></>:<ActiveLink to='/signUp'>SignUp</ActiveLink>}
                         <ActiveLink to='/blogs'>Blogs</ActiveLink>
 
                         {user && <button onClick={logout} >Sing Out</button>}
