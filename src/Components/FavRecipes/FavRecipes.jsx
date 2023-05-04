@@ -52,8 +52,8 @@ const FavRecipes = () => {
 
     return (
         <div className='container mx-auto'>
-            <h1>Favorite Recipes</h1>
-            <div className='grid grid-cols-3 gap-10'>
+            <h1 className='text-4xl my-7 text-center'>Favorite Recipes</h1>
+            <div className='grid md:grid-cols-3 gap-10'>
                 {
                     favArr.map(item=><ShowFavRecipes key={item.id} item={item}></ShowFavRecipes>)
                 }

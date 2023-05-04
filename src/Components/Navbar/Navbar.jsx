@@ -44,7 +44,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {user ? <img title={user.displayName} src={user.photoURL} className='rounded-full w-12'></img> : <Link className='btn btn-primary' to='/login'>Login</Link>}
+                    {user && <h1 className='mr-3'>Welcome <span className='font-bold'>{user.displayName}</span> </h1>}
+                    {user ?<><ActiveLink  to='/userinfo'><img  title={user.displayName} src={user.photoURL} className='rounded-full w-12'></img></ActiveLink></>  : <Link className='btn btn-primary' to='/login'>Login</Link>}
 
                 </div>
             </div>

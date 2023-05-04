@@ -16,7 +16,7 @@ const StreetFood = () => {
 
             <div className='grid md:grid-cols-3 gap-7'>
                 {
-                    food.map(item => <ShowStreetFood item={item}></ShowStreetFood>)
+                    food.map(item => <ShowStreetFood key={item.id} item={item}></ShowStreetFood>)
                 }
             </div>
 

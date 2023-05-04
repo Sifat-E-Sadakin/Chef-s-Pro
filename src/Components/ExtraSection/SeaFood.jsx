@@ -17,7 +17,7 @@ const SeaFood = () => {
             <h1 className='text-center text-4xl font-semibold my-20'>From The Sea</h1>
             <div className='grid lg:grid-cols-3 gap-7'>
                 {
-                    food.map(item=> <ShowSeaFood item={item}></ShowSeaFood>)
+                    food.map(item=> <ShowSeaFood key={item.id} item={item}></ShowSeaFood>)
                 }
             </div>
             

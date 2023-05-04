@@ -16,7 +16,7 @@ const Traditional = () => {
 
             <div className='grid md:grid-cols-3 gap-7'>
                 {
-                    food.map(item=> <ShowTraditional item={item}></ShowTraditional>)
+                    food.map(item=> <ShowTraditional key={item.id} item={item}></ShowTraditional>)
                 }
             </div>
 

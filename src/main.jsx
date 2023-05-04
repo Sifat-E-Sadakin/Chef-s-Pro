@@ -17,6 +17,7 @@ import Recipes from './Components/Recipes/Recipes.jsx';
 import NotFount from './Components/404/NotFount.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
 import FavRecipes from './Components/FavRecipes/FavRecipes.jsx';
+import UserInfo from './Components/UserInfo/UserInfo.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/favRecipes",
         element: <FavRecipes></FavRecipes>,
+      },
+      {
+        path: "/userinfo",
+        element: <UserInfo></UserInfo>,
       },
       {
         path: '/*',
