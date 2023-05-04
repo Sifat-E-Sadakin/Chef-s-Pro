@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 import './ChefsCard.css'
 const ChefsCard = ({chef}) => {
+
+  
 
     let {photo, name, location, id, number_of_recipes, likes, experience}= chef;
     return (

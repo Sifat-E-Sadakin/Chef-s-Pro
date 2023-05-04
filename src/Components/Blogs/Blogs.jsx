@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Blogs.css'
 import Pdf from "react-to-pdf";
 
 const Blogs = () => {
+
+    useEffect(()=>{
+        window.scroll(0,0);
+    },[])
+
 
     const ref = React.createRef();
     return (

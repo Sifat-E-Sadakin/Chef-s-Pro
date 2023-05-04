@@ -34,6 +34,7 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1 flex gap-2">
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='/recipes'>Chef Details</ActiveLink>
+                        <ActiveLink to='/favRecipes'>Favorite Recipes</ActiveLink>
 
                         {user? <></>:<ActiveLink to='/login'>Login</ActiveLink>}
                         {user?<></>:<ActiveLink to='/signUp'>SignUp</ActiveLink>}

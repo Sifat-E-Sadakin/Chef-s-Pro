@@ -8,6 +8,10 @@ export let userContext= createContext(null);
 
 const UserProvider = ({children}) => {
 
+    // useEffect(()=>{
+    //     window.scroll(0,0);
+    // },[])
+
     
 
     let [user, setUser]= useState(null);

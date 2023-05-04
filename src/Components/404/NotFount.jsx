@@ -1,10 +1,16 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 
 
 const NotFount = () => {
     return (
         <div>
-            <img src='/public/6342464.jpg' alt="" />
+            
+            
+            <img src='./6342464.jpg' alt="" />
+
+           
+           
             
         </div>
     );

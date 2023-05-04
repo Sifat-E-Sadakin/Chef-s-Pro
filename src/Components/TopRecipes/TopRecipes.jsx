@@ -3,6 +3,7 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToDb } from '../Utilities/LocalStoraeg';
 
 
 
@@ -26,7 +27,9 @@ const TopRecipes = ({ recipe }) => {
     }
 
     let addToLocalStorage =(id)=>{
-        console.log(id);
+        console.log(id)
+        addToDb(id)
+        
     }
 
 
@@ -35,7 +38,7 @@ const TopRecipes = ({ recipe }) => {
 
     return (
         <div>
-            <div className="  bg-gray-100 shadow-xl">
+            <div className=" card  bg-gray-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title text-3xl">{name}</h2>
                     <div>

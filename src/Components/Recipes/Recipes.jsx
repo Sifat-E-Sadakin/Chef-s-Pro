@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import './Recipes.css'
 import TopRecipes from '../TopRecipes/TopRecipes';
@@ -12,6 +12,11 @@ const Recipes = () => {
     let { photo, name, experience, likes , number_of_recipes, recipes} = chefsRecipes
 
     // console.log(recipes);
+
+    useEffect(()=>{
+        window.scroll(0,0);
+    },[])
+
 
 
     return (

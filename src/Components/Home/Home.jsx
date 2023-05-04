@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Outlet, useNavigation } from 'react-router-dom';
 import './Home.css'
@@ -6,6 +6,10 @@ import { ClipLoader, CircleLoader } from 'react-spinners';
 import Footer from '../Footer/Footer';
 
 const Home = () => {
+
+    // useEffect(()=>{
+    //     window.scroll(0,0);
+    // },[])
 
     const navigation = useNavigation();
     return (

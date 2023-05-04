@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToDb } from '../../Utilities/LocalStoraeg';
 
 
 const ShowTraditional = ({item}) => {
@@ -17,6 +18,7 @@ const ShowTraditional = ({item}) => {
 
     let addToLocalStorage =(id)=>{
         console.log(id);
+        addToDb(id)
     }
     return (
         <div className="card w-96  shadow-2xl">

@@ -16,6 +16,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import Recipes from './Components/Recipes/Recipes.jsx';
 import NotFount from './Components/404/NotFount.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
+import FavRecipes from './Components/FavRecipes/FavRecipes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/favRecipes",
+        element: <FavRecipes></FavRecipes>,
       },
       {
         path: '/*',
