@@ -1,16 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { userContext } from '../UserProvider/UserProvider';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from 'react-tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
+// import DarkModeToggle from "react-dark-mode-toggle";
 
 
 const Navbar = () => {
 
     let { user, logout } = useContext(userContext);
     // console.log(user && user.photoURL);
+    // const [isDarkMode, setIsDarkMode] = useState(() => false);
+    
 
 
     return (
@@ -36,7 +39,7 @@ const Navbar = () => {
                     <a className="btn btn-ghost normal-case text-xl">Chef's Pro</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 flex gap-5">
+                    <ul className="menu menu-horizontal px-1 font-medium flex gap-5">
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='/recipes'>Chef Details</ActiveLink>
                         <ActiveLink to='/favRecipes'>Favorite Recipes</ActiveLink>
@@ -46,11 +49,16 @@ const Navbar = () => {
                         <ActiveLink to='/blogs'>Blogs</ActiveLink>
 
                         {user && <button onClick={logout} >Sing Out</button>}
+                        {/* <DarkModeToggle
+                            onChange={setIsDarkMode}
+                            checked={isDarkMode}
+                            size={80}
+                        /> */}
                     </ul>
                 </div>
                 <div className="navbar-end">
                     {user && <h1 className='mr-3'>Welcome <span className='font-bold'>{user.displayName}</span> </h1>}
-                    {user ? <><ActiveLink  to='/userinfo'><img data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} title={user.displayName} src={user.photoURL} className='rounded-full w-12'></img></ActiveLink></> : <Link className='btn btn-primary' to='/login'>Login</Link>}
+                    {user ? <><ActiveLink to='/userinfo'><img data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} title={user.displayName} src={user.photoURL} className='rounded-full w-12'></img></ActiveLink></> : <Link className='btn btn-primary' to='/login'>Login</Link>}
                     <Tooltip id="my-tooltip" />
                 </div>
             </div>

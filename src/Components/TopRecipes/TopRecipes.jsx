@@ -27,7 +27,7 @@ const TopRecipes = ({ recipe }) => {
     }
 
     let addToLocalStorage =(id)=>{
-        console.log(id)
+        // console.log(id)
         addToDb(id)
         
     }

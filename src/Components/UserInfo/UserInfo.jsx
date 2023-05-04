@@ -5,9 +5,21 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const UserInfo = () => {
 
-    let { user, update } = useContext(userContext);
+    let { user, update , recoverPassword} = useContext(userContext);
 
-    let updateUser= event=>{
+     let recoverUserPassword = () => {
+
+        let email = document.getElementById('email').innerText
+        if (!email) {
+            toast('Please Provide Email to recover Password')
+        }
+        recoverPassword(email)
+        .then(()=>toast("Please Check Your Email to Reset Password"))
+        // console.log(email);
+
+    }
+
+    let updateUser = event => {
 
         event.preventDefault();
         let name = event.target.name.value;
@@ -16,9 +28,10 @@ const UserInfo = () => {
         // console.log(name, photo);
 
         update(name, photo)
-        .then(()=>{
-            toast('Profile Updated')
-            location.reload()}
+            .then(() => {
+                toast('Profile Updated')
+                location.reload()
+            }
             )
     }
 
@@ -36,7 +49,7 @@ const UserInfo = () => {
                                 </div>
                             </div>
                             <p className='text-xl'>Name : {user.displayName}</p>
-                            <p className='text-xl'>Email : {user.email}</p>
+                            <p className='text-xl'>Email : <span id='email'>{user.email}</span></p>
 
 
                         </>
@@ -62,11 +75,14 @@ const UserInfo = () => {
                             <button className="btn btn-primary">Update</button>
                         </div>
                     </form>
+                    <div className="form-control mt-6">
+                        <button onClick={recoverUserPassword} className="btn btn-primary">Update Password</button>
+                    </div>
 
 
                 </div>
             </div>
-          <ToastContainer></ToastContainer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

@@ -43,7 +43,7 @@ const UserProvider = ({children}) => {
             
                 setUser(userInfo);
                 setLoading(false)
-                console.log("onAuth change", userInfo);
+                // console.log("onAuth change", userInfo);
                 
             
 
