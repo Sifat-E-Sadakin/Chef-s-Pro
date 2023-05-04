@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ShowFavRecipes = ({item, remove}) => {
-
+console.log(item);
     
 
   

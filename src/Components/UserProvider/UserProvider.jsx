@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 import app from '../Firebase/Firebase.config';
 import { useNavigate } from 'react-router-dom';
 
@@ -86,6 +86,10 @@ const UserProvider = ({children}) => {
         .then(data=> setChefs(data))
     },[])
 
+    let recoverPassword =email=>{
+        return sendPasswordResetEmail(auth, email)
+    }
+
 
     let newUser={
         user,
@@ -96,7 +100,8 @@ const UserProvider = ({children}) => {
         googlePopUp,
         gitPopUp,
         chefs,
-        update
+        update,
+        recoverPassword
     }
 
 
