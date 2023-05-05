@@ -69,7 +69,7 @@ const UserInfo = () => {
                             <label className="label">
                                 <span className="label-text">Photo URL</span>
                             </label>
-                            <input name='photo' type="text" placeholder="URL of Photo" className="input input-bordered" />
+                            <input required name='photo' type="text" placeholder="URL of Photo" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Update</button>
