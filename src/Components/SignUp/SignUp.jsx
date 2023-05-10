@@ -106,10 +106,10 @@ const SignUp = () => {
                                 </div>
                             </form>
                             <div className="form-control mt-6">
-                                <button onClick={googlePopUp} className="btn btn-primary"><FaGoogle className='text-xl mr-2'></FaGoogle>SignUp with google</button>
+                                <button onClick={googlePopUp} className="btn btn-outline btn-accent"><FaGoogle className='text-xl mr-2'></FaGoogle>SignUp with google</button>
                             </div>
                             <div className="form-control mt-6">
-                                <button onClick={gitPopUp} className="btn btn-primary"><FaGithub className='text-xl mr-2'></FaGithub>SignUp with github </button>
+                                <button onClick={gitPopUp} className="btn btn-outline"><FaGithub className='text-xl mr-2'></FaGithub>SignUp with github </button>
                             </div>
                         </div>
                     </div>

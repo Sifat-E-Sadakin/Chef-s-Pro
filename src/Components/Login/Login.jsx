@@ -107,11 +107,11 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="form-control mt-6">
-                        <button onClick={handelGooglePopUp} className="btn btn-primary"><FaGoogle className='text-xl mr-2'></FaGoogle> Login With google</button>
+                        <button onClick={handelGooglePopUp} className="btn btn-accent  btn-outline"><FaGoogle className='text-xl mr-2'></FaGoogle> Login With google</button>
 
                     </div>
                     <div className="form-control mt-6">
-                        <button onClick={handelGitPopUp} className="btn btn-primary"><FaGithub className='text-xl mr-2'></FaGithub> Login With github</button>
+                        <button onClick={handelGitPopUp} className="btn  btn-outline"><FaGithub className='text-xl mr-2'></FaGithub> Login With github</button>
 
                     </div>
                 </div>
